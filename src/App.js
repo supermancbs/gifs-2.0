@@ -25,13 +25,9 @@ class App extends Component {
       })
   }
 
-
-
   changeNow(requestAjax){
     this.setState({requestAjax})
   }
-
-
 
   render() {
     return (

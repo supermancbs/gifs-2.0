@@ -12,7 +12,7 @@ export default class Gifs extends Component{
     return(
       <div>
         {this.props.gifs.map((gif, index) => {
-            return <div> <Gif data={gif} myIndex = {index}/> </div>
+            return <div> <Gif data={gif} key = {index}/> </div>
         }, this)
         }
       </div>
