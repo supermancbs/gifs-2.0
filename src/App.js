@@ -25,15 +25,9 @@ class App extends Component {
       })
   }
 
-  makeItMove(index){
-    var ajaxObj = this.state.requestAjax
-    ajaxObj[index].movingOrNOt = !ajaxObj[index].movingOrNOt
-    this.setState({requestAjax: ajaxObj})
-  }
 
-  changeNow(input){
-    var requestAjax  = input.map((request) => { request.movingOrNOt = false
-      return request})
+
+  changeNow(requestAjax){
     this.setState({requestAjax})
   }
 
@@ -47,7 +41,7 @@ class App extends Component {
         </div>
         <p className="App-intro">
             <SearchBar updateSearch={this.handleChange.bind(this)}/>
-            <Gifs gifs={this.state.requestAjax} makeItMove = {this.makeItMove.bind(this)}/>
+            <Gifs gifs={this.state.requestAjax}/>
 
             <p>{this.state.searchTerm}</p>
         </p>
